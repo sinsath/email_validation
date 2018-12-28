@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Success</title>
+</head>
+<body>
+    <h2>The email address you entered {{ email }} is a VALID email address. Thank you!</h2>
+    <ul>Email Addresses Entered:</ul>
+    {% for email in emails: %}    
+        <p>{{email['email']}} &nbsp {{email['created_at'].strftime('%Y/%m/%d %I:%M %p')}}</p>
+    
+{% endfor %}
+
+
+</body>
+</html>
